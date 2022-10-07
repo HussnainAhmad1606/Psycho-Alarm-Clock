@@ -1,2 +1,10 @@
-12:24:00 Facebook
-12:24:10 Twitter
+0 12:24:00 Facebook
+1 12:30:00 Twitter
+0 01:24:00 Facebook
+1 02:40:00 Twitter
+0 05:14:00 Facebook
+1 06:59:00 Twitter
+1 18:59:00 Go
+1 12:01:00 Facebook
+1 00:18:00 asas
+1 00:20:00 Sleep

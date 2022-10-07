@@ -1,5 +1,7 @@
 from plyer import notification
 from datetime import datetime
+now = datetime.now()
+current_time = now.strftime("%H:%M:%S")
 from time import sleep
 import pygame
 timeArrFinal = []
@@ -17,8 +19,8 @@ else:
 		al = time.split(" ")
 		print(len(al))
 		alarm = [
-		al[1],
-		al[0]
+		al[2],
+		al[1]
 		]
 		timeArrFinal.append(alarm)
 		print(al)

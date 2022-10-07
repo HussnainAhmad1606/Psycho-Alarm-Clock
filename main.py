@@ -2,6 +2,9 @@ from tkinter import *
 from tkinter.messagebox import showinfo
 import webbrowser
 from tkinter import ttk
+import os
+
+
 
 # Showing software info when user click on about in menu
 def aboutSoftware():
@@ -19,6 +22,9 @@ def saveAlarm():
 		isAm = None
 		if timeVar.get() == "AM":
 			isAm = 1
+			if time[0:2] == "12":
+				print("Check")
+				time = "00" + time[2:]
 		else:
 			isAm = 0
 		file.write(f"\n{isAm} {time}:00 {label}")
@@ -79,6 +85,8 @@ saveAlarmBtn.pack()
 resetBtn = Button(root, text="Clear", command=clear)
 resetBtn.pack()
 
+
+# Saved Alarms will be shown here
 alarmsLabel = Label(root, text="Your Alarms: ", font=(fontName, 25))
 alarmsLabel.pack()
 
@@ -128,4 +136,5 @@ statusBar = Frame(root, relief='groove', borderwidth=5)
 alarmStatusBar = Label(statusBar, textvariable=alarmStatus)
 alarmStatusBar.pack()
 statusBar.pack(side=BOTTOM, fill=BOTH)
+
 root.mainloop()
